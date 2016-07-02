@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD52EAB1-9A98-40BC-8201-B001FF8102ED}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StartupTests</RootNamespace>
+    <AssemblyName>StartupTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\8.TimerEvent\TimerEvent.csproj">
+      <Project>{7ecba5aa-de94-418f-ad3a-504529810dec}</Project>
+      <Name>TimerEvent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DividableByThreeAndSeven\DividableByThreeAndSeven.csproj">
+      <Project>{3e63ba5d-b977-4039-8731-d16016c2796d}</Project>
+      <Name>DividableByThreeAndSeven</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IEnumerables\IEnumerables.csproj">
+      <Project>{94ae7ab3-ab47-430a-a235-ca034cbb15b0}</Project>
+      <Name>IEnumerables</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InfiniteConvergetSeries\InfiniteConvergetSeries.csproj">
+      <Project>{82ca5a1b-cc64-45d0-83e1-10d34265331a}</Project>
+      <Name>InfiniteConvergetSeries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LongestString\LongestString.csproj">
+      <Project>{f4df8895-c4e1-48d9-82ce-e53f5e2683f6}</Project>
+      <Name>LongestString</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StringBuilder\StringBuilder.csproj">
+      <Project>{d8dd4668-1458-4522-83d4-ac372c72e64a}</Project>
+      <Name>StringBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Students\Students.csproj">
+      <Project>{23109998-eea5-489e-ab0b-db9c94a12a3a}</Project>
+      <Name>Students</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TimerDelegateTest\TimerDelegateTest.csproj">
+      <Project>{d8fbbd43-ccb2-44e5-b9fd-2618653baf51}</Project>
+      <Name>TimerDelegateTest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
